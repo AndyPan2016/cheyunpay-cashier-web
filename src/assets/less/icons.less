@@ -1,0 +1,165 @@
+/**
+ * 图标(icon)样式
+ * authors AndyPan (pye-mail@163.com)
+ * date    2019年9月4日23:07:40
+ */
+
+.icon {
+    display: inline-block;
+}
+
+.icon-history-user{
+    float: right;
+    width: 48px;
+    height: 48px;
+    margin-top: 26px;
+    background: url('../images/icon/icon-history-user.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-offline-recharge, .icon-to-bank, .icon-entrust-withdrawal, .icon-standard-withdrawal,
+.icon-to-zfb, .icon-to-account{
+    padding-left: 78px;
+    position: relative;
+    &::before{
+        content: '';
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        margin-top: -24px;
+        left: 0;
+        // background: @color-cccccc;
+    }
+}
+.icon-to-zfb{
+    &::before {
+        background: url('../images/icon/icon-to-zfb.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-to-account{
+    &::before {
+        background: url('../images/icon/icon-to-account.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-offline-recharge{
+    &::before {
+        background: url('../images/icon/icon-offline-recharge.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-to-bank{
+    &::before {
+        background: url('../images/icon/icon-to-bank.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-entrust-withdrawal{
+    &::before {
+        background: url('../images/icon/icon-entrust-withdrawal.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-standard-withdrawal {
+    &::before {
+        background: url('../images/icon/icon-standard-withdrawal.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.icon-qrcode-right, .icon-transfer-right, .icon-transaction-right{
+    padding-right: 58px;
+    position: relative;
+    &::after{
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        content: '';
+        width: 48px;
+        height: 48px;
+    }
+}
+.icon-qrcode-right{
+    &::after{
+        background: url('../images/icon/icon-qrcode-right.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-transfer-right{
+    &::after{
+        background: url('../images/icon/icon-transfer.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-transaction-right{
+    &::after{
+        background: url('../images/icon/icon-transaction-right.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.icon-radio {
+    &::after {
+        background: url('../images/icon/icon-radio.png') right center no-repeat;
+        background-size: 32px 32px;
+    }
+    
+    &.icon-radio-checked {
+        &::after {
+            background: url('../images/icon/icon-radio-checked.png') right center no-repeat;
+            background-size: 32px 32px;
+        }
+    }
+}
+
+.icon-status-success, .icon-status-wait, .icon-status-fail {
+    position: relative;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 216px;
+        height: 216px;
+        position: absolute;
+        top: 88px;
+        left: 50%;
+        margin-left: -108px;
+    }
+}
+.icon-status-success {
+    &::before {
+        background: url('../images/icon/icon-verify-success.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-status-wait {
+    &::before {
+        background: url('../images/icon/icon-verify-wait.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+.icon-status-fail {
+    &::before {
+        background: url('../images/icon/icon-verify-fail.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.icon-status-bind-card{
+    position: relative;
+    &::before{
+        display: inline-block;
+        width: 216px;
+        height: 196px;
+        content: '';
+        position: absolute;
+        top: 88px;
+        left: 50%;
+        margin-left: -108px;
+        background: url('../images/icon/icon-bind-card.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+    }
+}

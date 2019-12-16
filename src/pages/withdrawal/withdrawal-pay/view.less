@@ -1,0 +1,775 @@
+@charset "UTF-8";
+/**
+ * 银行账户管理 Less
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2019年9月18日22:17:03
+ */
+
+@import "../../../assets/less/commons/_mixins.less";
+@import "../../../assets/less/common.less";
+
+
+
+.page-main-accountmanage{
+    @hdHeight: 100px;
+    .tab-hd{
+        height: @hdHeight;
+        background: @color-ffffff;
+        text-align: center;
+        .tab-hd-wrap{
+            display: inline-block;
+            .tab-route-item{
+                display: inline-block;
+                // width: 170px;
+                margin: 0 60px;
+                height: @hdHeight;
+                line-height: @hdHeight;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                font-size: 30px;
+                color: @color-cccccc;
+                position: relative;
+                &.router-link-active, &.active{
+                    color: @color-222222;
+                    
+                    &::after{
+                        display: inline-block;
+                        content: '';
+                        border-bottom: 4px solid @color-primary;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .list-scroll{
+        top: 0;
+    }
+    .withdrawal-pay{
+        position: absolute;
+        // top: @hdHeight;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .form-block-button {
+        margin-top: 80px;
+    }
+    .page-process-status .ui-button{
+        margin: 0;
+    }
+    .bank-item {
+        margin: 0px 30px;
+        background: @color-ffffff;
+        padding: 30px;
+        margin-top: 20px;
+        text-align: left;
+        position: relative;
+        height: 150px;
+        // .bank-icon{
+        //     // float: left;
+        //     display: inline-block;
+        //     width: 90px;
+        //     height: 90px;
+        //     overflow: hidden;
+        // }
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        &.CMB127{
+            &::before {
+                background-image: url('../../../assets/images/bank/CMB127.png');
+                background-size: 90px 90px;
+            }
+        }
+          &.CCB{
+            &::before {
+                background-image: url('../../../assets/images/bank/CCB.png');
+                background-size: 90px 90px;
+            }
+          }
+          &.ABC{
+            &::before {
+                background-image: url('../../../assets/images/bank/ABC.png');
+                background-size: 90px 90px;
+            }
+          }
+          &.CQFMB{
+            &::before {
+                background-image: url('../../../assets/images/bank/CQFMB.png');
+                background-size: 90px 90px;
+            }
+          }
+          &.BCM{
+            &::before {
+                background-image: url('../../../assets/images/bank/BCM.png');
+                background-size: 90px 90px;
+            }
+          }
+          &.BHRCB{
+            &::before {
+                background-image: url('../../../assets/images/bank/BHRCB.png');
+                background-size: 90px 90px;
+            }
+          }
+          &.BJRCB{
+            &::before {
+                background-image: url('../../../assets/images/bank/BJRCB.png');
+                background-size: 90px 90px;
+            }
+          }
+          &.BOB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOBD{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOBD.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOC{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOC.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOCD{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOCD.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BODL{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BODL.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOGL{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOGL.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOGY{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOGY.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOJN{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOJN.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOLJ{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOLJ.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOLY{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOLY.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BONC{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BONC.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOS{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOS.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOSJ{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOSJ.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOXIA{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOXIA.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOXM{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOXM.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOYK{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOYK.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BOZZ{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BOZZ.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.BSB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/BSB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CBHB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CBHB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CEB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CEB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CGB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CGB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CHAB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CHAB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CIB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CIB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CITIC{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CITIC.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CJCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CJCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CMBC{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CMBC.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CQCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CQCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CQRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CQRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.CQTGB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/CQTGB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.DRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/DRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.DYCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/DYCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.DYLSCZ{
+                &::before {
+                    background-image: url('../../../assets/images/bank/DYLSCZ.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.DZB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/DZB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.EGB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/EGB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.GDNYB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/GDNYB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.GRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/GRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.GSNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/GSNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.GXNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/GXNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.GZCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/GZCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HANABANK{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HANABANK.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HBNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HBNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HKB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HKB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HNNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HNNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HSB129{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HSB129.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HUBNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HUBNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HUNNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HUNNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HXB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HXB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.HZB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/HZB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.ICBC{
+                &::before {
+                    background-image: url('../../../assets/images/bank/ICBC.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JJCCB126{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JJCCB126.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JLNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JLNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JNRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JNRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JSB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JSB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JSNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JSNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JYRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JYRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JZB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JZB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.JZCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/JZCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.KSRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/KSRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.LNNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/LNNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.LSB130{
+                &::before {
+                    background-image: url('../../../assets/images/bank/LSB130.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.LSCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/LSCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.LWB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/LWB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.LYCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/LYCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.LZCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/LZCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.NBCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/NBCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.NJCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/NJCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.NMGNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/NMGNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.nxxn, &.PAB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/nxxn.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.ORDOS{
+                &::before {
+                    background-image: url('../../../assets/images/bank/ORDOS.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.PAB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/PAB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.PJCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/PJCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.PSBC{
+                &::before {
+                    background-image: url('../../../assets/images/bank/PSBC.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.PZHCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/PZHCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.QDCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/QDCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.QSB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/QSB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.RZB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/RZB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.SCNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/SCNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.SHBANK{
+                &::before {
+                    background-image: url('../../../assets/images/bank/SHBANK.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.SHXNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/SHXNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.SPDB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/SPDB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.SRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/SRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.SXNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/SXNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.TAB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/TAB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.TCRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/TCRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.TJRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/TJRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.URB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/URB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.WFCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/WFCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.WHCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/WHCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.WHRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/WHRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.WJRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/WJRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.WZCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/WZCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.XHDLCZ{
+                &::before {
+                    background-image: url('../../../assets/images/bank/XHDLCZ.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.XJNX{
+                &::before {
+                    background-image: url('../../../assets/images/bank/XJNX.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.YRRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/YRRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.YTCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/YTCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.ZJGRCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/ZJGRCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.ZJKCCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/ZJKCCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+          &.ZJTLCB{
+                &::before {
+                    background-image: url('../../../assets/images/bank/ZJTLCB.png');
+                    background-size: 90px 90px;
+            }
+          }
+        .bank-info {
+            position: absolute;
+            top: 30px;
+            left: 140px;
+            right: 30px;
+            bottom: 30px;
+            .bank-name {
+                height: 44px;
+                line-height: 44px;
+                font-size: 32px;
+                color: @color-333333;
+                .text-overflow();
+            }
+            .bank-type {
+                height: 40px;
+                line-height: 40px;
+                font-size: 28px;
+                color: @color-cccccc;
+                .text-overflow();
+                margin-top: 10px;
+            }
+        }
+    }
+    .popup-pwd-box{
+        .pwd-box-hd{
+            height: 44px;
+            margin-bottom: 20px;
+            margin: 30px;
+            .hd-btn-reset{
+                float: left;
+                font-size: 32px;
+                color: @color-222222;
+            }
+            .hd-btn-forget{
+                float: right;
+                font-size: 32px;
+                color: @color-primary;
+            }
+        }
+        .pwd-title{
+            text-align: center;
+            font-size: 30px;
+            color: @color-222222;
+        }
+        .pwd-len-tip{
+            text-align: center;
+            font-size: 28px;
+            color: @color-cccccc;
+        }
+        .ui-button{
+            margin: 40px auto;
+        }
+    }
+}

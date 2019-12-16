@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+ * 账户余额支付 Less
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2019年10月11日17:34:55
+ */
+
+@import "../../../assets/less/commons/_mixins.less";
+@import "../../../assets/less/common.less";
+
+.page-main-pos{
+    // padding-top: 20px;
+    .form-block-button{
+        margin: 80px auto;
+    }
+    .detail-list-title{
+        height: 40px;
+        line-height: 40px;
+        font-size: 28px;
+        color: @color-222222;
+        text-align: left;
+        margin: 30px;
+    }
+    .pos-list-scroll{
+        // top: 510px;
+        top: 0;
+    }
+    .page-ad{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .ui-form .ui-form-block.form-block-remark{
+        background: @color-ffffff;
+        &.text-left{
+            color: @color-222222;
+        }
+        &.text-right{
+            border-top: 2px dashed @color-eeeeee;
+        }
+    }
+    .popup-pwd-box{
+        .pwd-box-hd{
+            height: 44px;
+            margin-bottom: 20px;
+            .hd-btn-reset{
+                float: left;
+                font-size: 32px;
+                color: @color-222222;
+            }
+            .hd-btn-forget{
+                float: right;
+                font-size: 32px;
+                color: @color-primary;
+            }
+        }
+        .pwd-title{
+            text-align: center;
+            font-size: 30px;
+            color: @color-222222;
+        }
+        .pwd-len-tip{
+            text-align: center;
+            font-size: 28px;
+            color: @color-cccccc;
+        }
+        .ui-button{
+            margin: 40px auto;
+        }
+    }
+}

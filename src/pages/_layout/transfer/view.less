@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/**
+ * Layout 中转页 LESS
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2019年9月26日22:11:55
+ */
+
+@import "../../../assets/less/commons/_mixins.less";
+
+.page-main{
+  .page-main-body{
+    position: absolute;
+    top: @headerHeight;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: auto;
+
+    &.no-header {
+      top: 0;
+    }
+  }
+}

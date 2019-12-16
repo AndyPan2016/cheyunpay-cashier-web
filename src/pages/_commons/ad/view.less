@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/**
+ * 头部 Less
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2019年8月21日13:56:30
+ */
+
+@import "../../../assets/less/commons/_mixins.less";
+
+.page-ad{
+  .ad-common{
+    height: 150px;
+    img{
+        width: 100%;
+    }
+    .wh_content{
+        .wh_indicator{
+            bottom: 5px;
+            .wh_indicator_item{
+                width: 30px;
+                border-radius: 0;
+                background: @color-ffffff;
+                &.wh_show_bgcolor{
+                    background: @color-43A1FF;
+                }
+            }
+        }
+    }
+  }
+}
